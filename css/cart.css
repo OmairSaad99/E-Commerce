@@ -1,0 +1,325 @@
+/*Start Global rules*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+:root{
+    --main_color :#2196f3 ;
+    --main_color_alt :#1787e0 ;
+    --margins : 60px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.2);
+    z-index: -1;
+}
+
+
+@media (min-width : 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px){
+    .container{
+        width: 1970px;
+    }
+}
+
+@media (min-width : 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+
+img{
+    width: 100%;
+    height: 220px;
+}
+
+/*End Global rules*/
+
+
+
+/*Start Header*/
+
+header{
+    background-color: #0dcaf0;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+header .container .icon {
+    color: black;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    display: none;
+    
+}
+
+
+header .container a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+header .container .focus{
+    position: absolute;
+    width: 100% ;
+    height: 0px;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    background-color: #0dcaf0;
+    top: 100%;
+   transition: height 0.3s;
+}
+
+header .container .focus .foc-ul{
+   
+    flex-direction: column;
+    margin-left: 15px;
+    display: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    visibility: hidden;
+    padding-bottom: 12px;
+    padding-top: 12px;
+
+}
+
+header .container .focus .foc-ul .li-a{
+    color: black;
+    height: 0;
+}
+
+
+header .container ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .container ul{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 30px;
+    font-size: 15px;
+}
+
+header .container ul li,
+header .container a{
+    display: flex;
+    height: 74px;
+    align-items: center;
+}
+
+
+
+
+
+@media (max-width: 424px) {
+    header .container .icon {
+        position: absolute;
+        right: 15px;
+        display: flex;
+        cursor: pointer;
+        padding: 17px;
+    }
+
+    header .container .icon{
+        font-size: 21px;
+    }
+
+    header .container ul {
+        display: none;
+    }
+}
+/*End Header*/
+
+/*start Head*/
+.head{
+    margin-top: 20px;
+}
+.head h2{
+    color: #dc3545;
+}
+/*end Head*/
+
+
+/* الأساسيات العامة */
+.item-cart .container {
+    border: 1px solid #ddd;
+}
+
+.item-cart .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-cart .head p {
+    color: #dc3545;
+}
+
+.item-cart .head p:hover {
+    color: #bb2d3b;
+}
+
+#itemTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#itemTable thead {
+    color: #333;
+    text-align: center;
+}
+
+#itemTable th {
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+#itemTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#itemTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#itemTable img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* قواعد التفاعل مع الشاشات الصغيرة */
+@media (max-width: 1000px) {
+    .item-cart .container {
+        padding: 0;
+        width: 91%;
+        text-align: center;
+    }
+
+    #itemTable {
+        border: none;
+    }
+
+    #itemTable thead {
+        display: none;
+    }
+
+    #itemTable tbody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #itemTable tbody tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    #itemTable td {
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .order{
+        display: block;
+        width: 91%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/*end Item Cart*/
+
+
+/*Start Order*/
+.order{
+    display: none;
+}
+
+.order .container{
+    background-color: #d1e7dd;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.order span{
+    color: #198754;
+    font-weight: bolder;
+}
+
+
+/*end Order*/
+
