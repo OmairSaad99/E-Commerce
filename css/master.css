@@ -224,11 +224,6 @@ header .container .focus .foc-ul .li-a{
     margin-top: 135px;
 }
 
-.row{
-  
-    justify-content: center;
-    
-}
 
 .items .box{
     border-radius: 10px;
@@ -309,10 +304,6 @@ header .container .focus .foc-ul .li-a{
     .items .container .row.mt-5{
         margin-top: 25px !important;
     }
-    .items .container .row .box{
-        margin-bottom: 25px;
-
-    }
   
 }
 
@@ -323,4 +314,11 @@ header .container .focus .foc-ul .li-a{
     }
 
     
+}
+
+@media (min-width : 1001px)
+{
+    .items .row{
+        justify-content: center;
+    }
 }
